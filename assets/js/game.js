@@ -3,7 +3,7 @@ const SHIP_SIZE = 30; //ship size in pixels
 const TURN_SPEED = 360; //turn speed in degrees per second
 const FRICTION = 0.6; //friction in space //thrust slowing down
 const BASE_THRUST = 5; //acceleration
-const ROIDS_NUM = 10; //number of asteriods
+const ROIDS_NUM = 15; //number of asteriods
 const ROIDS_JAG = 0.7; //rough edges of astroid 0 = none 1 = lot
 const ROIDS_SIZE = 100; //starting size
 const ROIDS_SPD = 20;
@@ -66,8 +66,8 @@ function createAstroidBelt() {
   for (var i = 0; i < ROIDS_NUM; i++) {
     // random asteroid location (not touching spaceship)
     do {
-      x = Math.floor(Math.random() * canv.width);
-      y = Math.floor(Math.random() * canv.height);
+      x = Math.floor(Math.random() * window.innerWidth);
+      y = Math.floor(Math.random() * window.innerHeight);
     } while (distBetweenPoints(ship.x, ship.y, x, y) < ROIDS_SIZE * 2 + ship.r);
     roids.push(newAsteroid(x, y, Math.ceil(ROIDS_SIZE / 2)));
   }
