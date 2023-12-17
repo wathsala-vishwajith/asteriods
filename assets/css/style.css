@@ -9,6 +9,16 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.content {
+  background:transparent;
+  z-index: 1;
+}
+
+#gameCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -24,13 +34,16 @@ a:hover {
   text-decoration: none;
 }
 
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,span,strong,li,p {
   font-family: "Raleway", sans-serif;
+  color: white !important;
 }
 
 /*--------------------------------------------------------------
@@ -79,15 +92,12 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: transparent;
   overflow-y: auto;
 }
 
-#header .profile img {
-  margin: 15px auto;
-  display: block;
-  width: 120px;
-  border: 8px solid #2c2f3f;
+.profile {
+  margin-top: 3em;
 }
 
 #header .profile h1 {
@@ -241,7 +251,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: black;
   background-size: cover;
 }
 
@@ -346,6 +356,10 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about{
+  background: black;
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -382,6 +396,7 @@ section {
 # Facts
 --------------------------------------------------------------*/
 .facts {
+  background: black;
   padding-bottom: 30px;
 }
 
@@ -430,8 +445,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
+
+.skills{
+  background: black;
+}
+
 .skills .progress {
   height: 60px;
   display: block;
@@ -469,6 +489,10 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume{
+  background: black;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
