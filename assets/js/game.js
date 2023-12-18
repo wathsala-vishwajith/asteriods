@@ -39,7 +39,7 @@ var ship = newShip();
 function newShip() {
   return {
     x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
+    y: (3 * window.innerHeight) / 5,
     a: (90 / 180) * Math.PI, // convert to radians
     r: SHIP_SIZE / 2,
     blinkNum: Math.ceil(SHIP_INV_DUR / SHIP_BLINK_DUR),
