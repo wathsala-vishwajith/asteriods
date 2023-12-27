@@ -151,6 +151,7 @@ document.addEventListener("keydown", keyDown);
 document.addEventListener("keyup", keyUp);
 
 function keyDown(/** {KeyboardEvent} */ ev) {
+  ev.preventDefault();
   // console.log(ev.keyCode);
   switch (ev.keyCode) {
     case 32: //space
@@ -172,6 +173,7 @@ function keyDown(/** {KeyboardEvent} */ ev) {
 }
 
 function keyUp(/** {KeyboardEvent} */ ev) {
+  ev.preventDefault();
   // console.log(ev.keyCode);
   switch (ev.keyCode) {
     case 32: //space
